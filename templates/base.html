@@ -1,0 +1,280 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    #nav {
+      list-style-type: none;
+      margin-top: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #007a5a;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      /* border-radius: 10%; */
+    }
+
+    h2 {
+      color: white;
+      text-align: center;
+    }
+
+    .li {
+      float: left;
+
+    }
+
+    .li a {
+
+      display: block;
+      border-radius: 20%;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: rgb(229, 219, 219);
+      color: black;
+      font-weight: bold;
+    }
+
+    .form-style button {
+
+      width: 60%;
+      height: 70%;
+      padding: 5%;
+      background: #007a5a;
+      border-bottom: 2px solid white;
+      border-radius: 30%;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      color: white;
+      font-weight: bold;
+      font-size: 28px;
+      font-family: "Times New Roman";
+    }
+
+    .form-style button:hover {
+      background-color: rgb(229, 219, 219);
+      border-radius: 20%;
+      color: black;
+      font-weight: bold;
+    }
+
+    .split {
+      height: 100%;
+      width: 50%;
+      position: fixed;
+      z-index: 1;
+      top: 50;
+      overflow-x: hidden;
+      padding-top: 20px;
+
+    }
+
+    .left {
+      left: 15;
+      border-right: 0px rgb(229, 219, 219) solid;
+    }
+
+    .right {
+      right: 0;
+      border-left: 1px rgb(229, 219, 219) solid;
+    }
+
+    .mytext {
+      border: 1px #007a5a solid;
+      border-right: none;
+      padding: 4px;
+      margin: 0px;
+      float: left;
+      height: 32px;
+      overflow: hidden;
+      line-height: 16px;
+      width: 300px;
+      margin-left: 54px;
+    }
+
+    .mic {
+      border: 1px solid #393f4d;
+      background: #007a5a;
+      vertical-align: top;
+      padding: 0px;
+      margin: 0;
+      float: left;
+      height: 42px;
+      overflow: hidden;
+      width: 5em;
+      text-align: center;
+      line-height: 16px;
+      border-radius: 30%;
+    }
+
+
+    .submit {
+      border: 1px solid #393f4d;
+      height: 42px;
+      width: 130px;
+      text-align: center;
+      background-color: #007a5a;
+      color: rgb(229, 219, 219);
+      font-weight: bold;
+      font-size: 24px;
+      font-family: "Times New Roman";
+      vertical-align: top;
+      border-radius: 30%;
+    }
+
+    .submit:hover {
+      background-color: rgb(229, 219, 219);
+      color: black;
+      font-weight: bold;
+    }
+
+    #about {
+      list-style-type: none;
+    }
+
+    .td {
+      color: white;
+      font-weight: bold;
+      font-size: 25px;
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    body {
+      background-color: rgb(94, 89, 89);
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .form-style {
+      font: 95% Arial, Helvetica, sans-serif;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 16px;
+
+    }
+
+    .form-style h1,
+    .form-style a {
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "Times New Roman";
+      text-align: center;
+      margin: -16px -16px 16px -16px;
+      color: white;
+    }
+
+    .form-style input[type="text"],
+    .form-style input[type="password"],
+    .form-style input[type="date"],
+    .form-style input[type="datetime"],
+    .form-style input[type="email"],
+    .form-style input[type="number"],
+    .form-style input[type="search"],
+    .form-style input[type="time"],
+    .form-style input[type="url"],
+    .form-style textarea,
+    .form-style select {
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 60%;
+      border-radius: 15%;
+      background: #ebe4e4;
+      margin-bottom: 4%;
+      border: 1px solid #ebe4e4;
+      padding: 4%;
+      color: #0000a0;
+      font: 95% Arial, Helvetica, sans-serif;
+    }
+
+    .form-style input[type="text"]:focus,
+    .form-style input[type="password"]:focus,
+    .form-style input[type="date"]:focus,
+    .form-style input[type="datetime"]:focus,
+    .form-style input[type="email"]:focus,
+    .form-style input[type="number"]:focus,
+    .form-style input[type="search"]:focus,
+    .form-style input[type="time"]:focus,
+    .form-style input[type="url"]:focus,
+    .form-style textarea:focus,
+    .form-style select:focus {
+      box-shadow: 0 0 5px #0000a0;
+      padding: 3%;
+      border: 1px solid #0000a0;
+    }
+
+    .site-form span,
+    label {
+      color: white;
+    }
+
+    .errorlist {
+      color: red;
+      font-weight: bold;
+    }
+
+    h3 {
+      color: white;
+      text-align: center;
+    }
+  </style>
+  <title>Homepage</title>
+</head>
+<div
+  style="background-color:rgb(229, 219, 219);color:#007a5a;padding:10 10 1 10;border: 1px white groove;margin-bottom:0;">
+
+  <h1 align=center> Voice/Text to ISL Translator</h1>
+</div>
+<br>
+
+<body>
+  <ul id="nav">
+    <li class="li"><a class="active" href="{% url 'home' %}">Home</a></li>
+    <li class="li"><a href="{% url 'animation' %}">Convertor</a></li>
+    {% if not user.is_authenticated %}
+    <li class="li"><a href="{% url 'signup' %}">Sign Up</a></li>
+    {% endif %}
+    {% if user.is_authenticated %}
+    <li class="li"><a href="{% url 'logout' %}">Log-Out</a></li>
+    {% else %}
+    <li class="li"><a href="{% url 'login' %}">Log-in</a></li>
+    {% endif %}
+    <li class="li"><a href="{% url 'contact' %}">Contact</a></li>
+    <li class="li"><a href="{% url 'about' %}">About</a></li>
+  </ul>
+
+  <div class="wrapper">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+
+</body>
+
+</html>
