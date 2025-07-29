@@ -22,17 +22,17 @@ A Django-based web application that converts spoken audio or typed text into cor
 git clone https://github.com/Sinchana258/audio2sign.git
 cd audio2sign
 ```
-# 2. Create a Virtual Environment (Recommended)
+### 2. Create a Virtual Environment (Recommended)
 ```bash
 python -m venv venv
 source venv/bin/activate    # Linux/macOS
 venv\Scripts\activate       # Windows
 ```
-# 3.  Install Requirements
+### 3.  Install Requirements
 ```bash
 pip install -r requirements.txt
 ```
-# 4. Start the Development Server
+### 4. Start the Development Server
 ```bash
 python manage.py runserver
 ```
