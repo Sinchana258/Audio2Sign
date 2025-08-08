@@ -13,7 +13,6 @@
     }
 
     #nav {
-
       list-style-type: none;
       margin-top: 0;
       padding: 0;
@@ -23,7 +22,6 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      /* border-radius: 10%; */
     }
 
     h2 {
@@ -33,11 +31,9 @@
 
     .li {
       float: left;
-
     }
 
     .li a {
-
       display: block;
       border-radius: 7%;
       color: white;
@@ -53,30 +49,6 @@
       font-weight: bold;
     }
 
-    .form-style button {
-
-      width: 60%;
-      height: 70%;
-      padding: 5%;
-      background: #007a5a;
-      border-bottom: 2px solid white;
-      border-radius: 3%;
-      border-top-style: none;
-      border-right-style: none;
-      border-left-style: none;
-      color: white;
-      font-weight: bold;
-      font-size: 28px;
-      font-family: "Times New Roman";
-    }
-
-    .form-style button:hover {
-      background-color: rgb(229, 219, 219);
-      border-radius: 5%;
-      color: black;
-      font-weight: bold;
-    }
-
     .split {
       height: 100%;
       width: 50%;
@@ -85,7 +57,6 @@
       top: 50;
       overflow-x: hidden;
       padding-top: 20px;
-
     }
 
     .left {
@@ -126,7 +97,6 @@
       border-radius: 3%;
     }
 
-
     .submit {
       border: 1px solid #393f4d;
       height: 42px;
@@ -166,75 +136,6 @@
       padding: 0;
     }
 
-    .form-style {
-      font: 95% Arial, Helvetica, sans-serif;
-      max-width: 400px;
-      margin: 10px auto;
-      padding: 16px;
-
-    }
-
-    .form-style h1,
-    .form-style a {
-      padding: 20px 0;
-      font-size: 24px;
-      font-weight: bold;
-      font-family: "Times New Roman";
-      text-align: center;
-      margin: -16px -16px 16px -16px;
-      color: white;
-    }
-
-    .form-style input[type="text"],
-    .form-style input[type="password"],
-    .form-style input[type="date"],
-    .form-style input[type="datetime"],
-    .form-style input[type="email"],
-    .form-style input[type="number"],
-    .form-style input[type="search"],
-    .form-style input[type="time"],
-    .form-style input[type="url"],
-    .form-style textarea,
-    .form-style select {
-      -webkit-transition: all 0.30s ease-in-out;
-      -moz-transition: all 0.30s ease-in-out;
-      -ms-transition: all 0.30s ease-in-out;
-      -o-transition: all 0.30s ease-in-out;
-      outline: none;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      width: 60%;
-      border-radius: 3%;
-      background: #ebe4e4;
-      margin-bottom: 4%;
-      border: 1px solid #ebe4e4;
-      padding: 4%;
-      color: #0000a0;
-      font: 95% Arial, Helvetica, sans-serif;
-    }
-
-    .form-style input[type="text"]:focus,
-    .form-style input[type="password"]:focus,
-    .form-style input[type="date"]:focus,
-    .form-style input[type="datetime"]:focus,
-    .form-style input[type="email"]:focus,
-    .form-style input[type="number"]:focus,
-    .form-style input[type="search"]:focus,
-    .form-style input[type="time"]:focus,
-    .form-style input[type="url"]:focus,
-    .form-style textarea:focus,
-    .form-style select:focus {
-      box-shadow: 0 0 5px #0000a0;
-      padding: 3%;
-      border: 1px solid #0000a0;
-    }
-
-    .site-form span,
-    label {
-      color: white;
-    }
-
     .errorlist {
       color: red;
       font-weight: bold;
@@ -244,13 +145,97 @@
       color: white;
       text-align: center;
     }
+
+    /* ===== Auth Page Styling ===== */
+    .auth-page .form-style {
+      width: 400px;
+      margin: 30px auto;
+      padding: 25px;
+      background: rgb(94, 89, 89);
+      ;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .auth-page .form-style h1 {
+      text-align: center;
+      font-size: 28px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .auth-page .form-style label {
+      font-size: 18px;
+      color: white;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .auth-page .form-style input[type="text"],
+    .auth-page .form-style input[type="email"],
+    .auth-page .form-style input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .auth-page .form-style input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #007b5e;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .auth-page .form-style input[type="submit"]:hover {
+      background: #005f46;
+    }
+
+    /* ===== Page-specific Buttons ===== */
+    .animation-btn {
+      background: #005f46;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .animation-btn:hover {
+      background: #005f46;
+    }
+
+    .home-btn {
+      background: #005f46;
+      color: white;
+      font-size: 20px;
+      padding: 15px 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid #393f4d;
+      margin-top: 30px;
+      height: 60px;
+      width: 150px;
+      text-align: center;
+      background-color: #007a5a;
+    }
+
+    .home-btn:hover {
+      background: #005f46;
+    }
   </style>
   <title>Homepage</title>
 </head>
 <div
   style="background-color:rgb(229, 219, 219);color:#007a5a;padding:10 10 1 10;border: 1px white groove;margin-bottom:0;">
 
-  <h1 align=center> Voice/Text to ISL Translator</h1>
+  <h1 align=center> Audio/Text to ISL Converter</h1>
 </div>
 <br>
 
