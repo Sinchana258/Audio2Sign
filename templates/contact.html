@@ -1,14 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="contact-container"
+    style="max-width: 800px; margin: auto; padding: 2rem; background: rgb(94, 89, 89); border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
 
-<h2>VERSION 1.0.0</h2>
-<hr>
-<h2>CONTACT US</h2>
-<p class="td">For any queries regarding this website contact us on following:</p>
-<p class="td">Our Email ID:voice.sign.isl@gmail.com</p>
-<p class="td">Contact number:(91)1234567890</p>
-<hr>
-<p class="td">Thank you, For visiting our website</p>
+    <h1 style="text-align: center; color: #0b0b0b;">📞 Contact Us</h1>
+    <p style="text-align: center; font-size: 1.1rem; color: #fbf6f6;">
+        Have questions, feedback, or need support? We’d love to hear from you.
+    </p>
+    <hr style="margin: 1.5rem 0;">
 
+    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center; font-size: 1.05rem;">
+        <div>
+            <strong style="color: black;">Email:</strong> <span style="color: #fbf6f6;">voice.sign.isl@gmail.com</span>
+        </div>
+        <div>
+            <strong style="color: black;">Phone:</strong> <span style="color: #fbf6f6;">(+91) 12345 67890</span>
+        </div>
+        <div>
+            <strong style="color: black;">Version:</strong> <span style="color: #fbf6f6;">1.0.0</span>
+        </div>
+    </div>
+
+    <hr style="margin: 1.5rem 0;">
+
+    <p style="text-align: center; color: #fffdfd;">Thank you for visiting our website ❤️</p>
+</div>
 {% endblock %}

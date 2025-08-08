@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
-
-
 {% block content %}
-<div class="form-style">
-	<h1>Log in</h1>
-	<form class="site-form" action="." method="post">
-		{% csrf_token %}
-		{{ form }}
-		{% if request.GET.next %}
-		<input type="hidden" name="next" value="{{ request.GET.next }}">
-		{% endif %}
-		<input class="submit" type="submit" value="Log in">
-	</form>
+<div class="auth-page">
+	<div class="form-style">
+		<h1>Log in</h1>
+		<form action="." method="post">
+			{% csrf_token %}
+			<label for="id_username">Username:</label>
+			<input type="text" name="username" id="id_username" required>
+
+			<label for="id_password">Password:</label>
+			<input type="password" name="password" id="id_password" required>
+
+			{% if request.GET.next %}
+			<input type="hidden" name="next" value="{{ request.GET.next }}">
+			{% endif %}
+			<input type="submit" value="Log in">
+		</form>
+	</div>
 </div>
 {% endblock %}
