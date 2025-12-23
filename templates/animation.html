@@ -38,13 +38,6 @@
 
 	<div style="text-align:center"> &nbsp&nbsp
 		<button class="submit" onclick="playPause()">Play/Pause</button>
-		<!--  LETS USE ONLY PLAY PAUSE BUTTON WITH 720 *420 ,IT FITS THE SCREEN ASHISH
-
-  	<button onclick="makeBig()">Big</button>
-  	<button onclick="makeSmall()">Small</button>
-  	<button onclick="makeNormal()">Normal</button>-->
-
-
 		<video id="videoPlayer" width="600" height="350" preload="auto" autoplay>
 			<source src="" type="video/mp4">
 			Your browser does not support HTML5 video.
@@ -56,15 +49,28 @@
 <script>
 	//webkitSpeechRecognition api for speech to text conversion
 	function record() {
-		var recognition = new webkitSpeechRecognition();
+		const recognition = new webkitSpeechRecognition();
 		recognition.lang = 'en-IN';
+		recognition.interimResults = false; // set to true if you want live partial results
+		recognition.maxAlternatives = 1;
 
 		recognition.onresult = function (event) {
-			console.log(event)
-			document.getElementById('speechToText').value = event.results[0][0].transcript;
-		}
+			const transcript = event.results[0][0].transcript;
+			console.log("Transcript:", transcript);
+			document.getElementById('speechToText').value = transcript;
+		};
+
+		recognition.onerror = function (event) {
+			console.error("Speech recognition error:", event.error);
+		};
+
+		recognition.onend = function () {
+			console.log("Speech recognition ended.");
+		};
+
 		recognition.start();
 	}
+
 	function play() {
 		var videoSource = new Array();
 		var videos = document.getElementById("list").getElementsByTagName("li");
