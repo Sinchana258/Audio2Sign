@@ -4,8 +4,10 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login,logout
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-from nltk.stem import WordNetLemmatizer
 import nltk
+nltk.data.path.append(r"C:\Users\Sinchana\AppData\Roaming\nltk_data")
+nltk.data.path.append(r"C:\Users\Sinchana\AppData\Roaming\nltk_data")
+from nltk.stem import WordNetLemmatizer
 from django.contrib.staticfiles import finders
 from django.contrib.auth.decorators import login_required
 
