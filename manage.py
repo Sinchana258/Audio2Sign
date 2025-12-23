@@ -3,7 +3,6 @@
 import os
 import sys
 
-
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'A2SL.settings')
     try:
